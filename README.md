@@ -1,7 +1,8 @@
 # Spotify Clone
 
 A premium, high-fidelity Spotify Web Player clone built with HTML, CSS, and Vanilla JavaScript.
-
+## 🚀 Live Demo
+👉https://spotify-clone-six-pink-14.vercel.app/
 ## Features
 - **Modern UI**: Dark-themed, glassmorphic layout closely mimicking Spotify.
 - **Audio Playback**: Full music player functionality featuring play/pause, volume control (UI), track duration/time status, and next/prev controls.
