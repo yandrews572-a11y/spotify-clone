@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                    <li><a href="#"><i class="fa-solid fa-lines-leaning"></i> Your Library</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-actions">
+                <button class="create-playlist"><i class="fa-solid fa-plus"></i> Create Playlist</button>
+                <button class="liked-songs"><i class="fa-solid fa-heart"></i> Liked Songs</button>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="playlists">
+                <p>Top Tamil Hits</p>
+                <p>Melody Mix</p>
+                <p>Night Drives</p>
+                <p>Daily Mix 1</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="header">
+                <div class="nav-arrows">
+                    <button class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="user-actions">
+                    <button class="upgrade-btn">Explore Premium</button>
+                    <button class="install-btn"><i class="fa-regular fa-circle-down"></i> Install App</button>
+                    <div class="user-profile">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <h1>Good evening</h1>
+                <div class="grid-container">
+                    <div class="grid-item song-card" data-index="0">
+                        <img src="assets/thangapoove.png" alt="Thangapoove">
+                        <span>Thangapoove</span>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="grid-item song-card" data-index="1">
+                        <img src="assets/pavazha_malli.png" alt="Pavazha Malli">
+                        <span>Pavazha Malli</span>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="grid-item song-card" data-index="2">
+                        <img src="assets/neelothi.png" alt="Neelothi">
+                        <span>Neelothi</span>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="grid-item song-card" data-index="3">
+                        <img src="assets/dheema.png" alt="Dheema">
+                        <span>Dheema</span>
+                        <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="made-for-you">
+                <div class="section-header">
+                    <h2>Made For You</h2>
+                    <a href="#">Show all</a>
+                </div>
+                <div class="card-container">
+                    <div class="music-card song-card" data-index="0">
+                        <img src="assets/thangapoove.png" alt="Thangapoove">
+                        <h3>Thangapoove</h3>
+                        <p>Masstamilan.MY</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="music-card song-card" data-index="1">
+                        <img src="assets/pavazha_malli.png" alt="Pavazha Malli">
+                        <h3>Pavazha Malli</h3>
+                        <p>Think Indie</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="music-card song-card" data-index="2">
+                        <img src="assets/neelothi.png" alt="Neelothi">
+                        <h3>Neelothi</h3>
+                        <p>Masstamilan.MY</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="music-card song-card" data-index="3">
+                        <img src="assets/dheema.png" alt="Dheema">
+                        <h3>Dheema</h3>
+                        <p>Masstamilan.MY</p>
+                        <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Player Bar -->
+        <footer class="player-bar">
+            <div class="now-playing">
+                <img src="assets/thangapoove.png" alt="Current Track" id="current-track-img">
+                <div class="track-info">
+                    <h4 id="current-track-title">Thangapoove</h4>
+                    <p id="current-track-artist">Masstamilan.MY</p>
+                </div>
+                <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-btns">
+                    <button id="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                    <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="play-pause" class="main-play-btn"><i class="fa-solid fa-circle-play"></i></button>
+                    <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+                    <button id="repeat"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <button><i class="fa-solid fa-microphone"></i></button>
+                <button><i class="fa-solid fa-list"></i></button>
+                <button><i class="fa-solid fa-computer"></i></button>
+                <div class="volume-bar-container">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="volume-bar">
+                        <div class="volume-level" id="volume-level"></div>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-maximize"></i></button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
